@@ -2,7 +2,7 @@
 
 </ul><h2> Preview ⚡️</h2>
 <p align="center">
-  <img src="./images/" alt="Sizzzling-Delights" width="100%" />
+  <img src="./img/Sizzling_Delights_Website.jpg" alt="Sizzzling-Delights" width="100%" />
 </p>
 
 ## Features 🔥
@@ -13,16 +13,17 @@
 
 **Markup**: HTML <br />
 **Design**: Css<br />
+**Preprocessor**: SASS <br />
 **Language**: JavaScript <br />
 
 ## Usage 📋
 
 <details open>
-<summary> Here it is used to Design 3D Cube Image Gallery </summary>
+<summary> Here it is used to create a website of Sizzling Delights Restaurant using html, css, sass and javascript </summary>
 
 ```bash
 #1. clone this project
-~ git clone https://github.com/
+~ git clone https://github.com/ashishthomas/Sizzling-Restaurant-Website.git
 
 #2. Open the index.html file in your browser
 ~ open index.html
