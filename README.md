@@ -13,7 +13,7 @@
 
 **Markup**: HTML <br />
 **Design**: Css<br />
-**css-framework**: Bootstrap <br />
+**Css-Framework**: Bootstrap <br />
 **Preprocessor**: SASS <br />
 **Language**: JavaScript <br />
 
