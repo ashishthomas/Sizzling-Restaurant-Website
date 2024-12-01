@@ -7,7 +7,7 @@
 
 ## Features 🔥
 
-✔️ Created a Design using html, css and javascript for the the 3D cube Image Gallery <br />
+✔️ Created a Website of Sizzling Delights Restaurant using html, css, sass and javascript <br />
 
 ## Technologies used 🛠️
 
