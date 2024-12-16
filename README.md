@@ -1,4 +1,4 @@
-## Sizzling Delights Resta 🎯
+## Sizzling Delights Restaarant 🎯
 
 </ul><h2> Preview ⚡️</h2>
 <p align="center">
