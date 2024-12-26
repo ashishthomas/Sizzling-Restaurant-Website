@@ -142,7 +142,13 @@
                 Cookies are small text files stored on your device to enhance
                 your browsing experience. They help us analyze web traffic and
                 improve our services. By using our website, you agree to our use
-                of cookies.
+                of cookies. Cookies can store your preferences, login
+                information, and other data to make your interactions with our
+                site more efficient and personalized. You can manage your cookie
+                preferences through your browser settings, where you can also
+                delete existing cookies or block new ones from being stored.
+                Please note that disabling cookies may affect the functionality
+                of our website and your user experience.
               </p>
               <h2 class="mb-4">Manage Your Preferences</h2>
               <form>
@@ -150,29 +156,43 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    name="essential"
+                    id="essentialCookies"
                     checked
                     disabled
                   />
-                  <label class="form-check-label">
-                    Essential Cookies (Always Enabled)
+                  <label class="form-check-label" for="essentialCookies">
+                    Essential Cookies (Required)
                   </label>
                 </div>
                 <div class="form-check mb-3">
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    name="analytics"
+                    id="performanceCookies"
                   />
-                  <label class="form-check-label"> Analytics Cookies </label>
+                  <label class="form-check-label" for="performanceCookies">
+                    Performance Cookies
+                  </label>
                 </div>
                 <div class="form-check mb-3">
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    name="advertising"
+                    id="functionalCookies"
                   />
-                  <label class="form-check-label"> Advertising Cookies </label>
+                  <label class="form-check-label" for="functionalCookies">
+                    Functional Cookies
+                  </label>
+                </div>
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="targetingCookies"
+                  />
+                  <label class="form-check-label" for="targetingCookies">
+                    Targeting/Advertising Cookies
+                  </label>
                 </div>
                 <button type="submit" class="btn btn-primary">
                   Save Preferences
