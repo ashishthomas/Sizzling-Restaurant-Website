@@ -70,29 +70,31 @@
   // });
 
   // Facts counter
-  console.log("Initializing facts counter");
+  $(document).ready(function () {
+    console.log("Initializing facts counter");
 
-  $('[data-toggle="counter-up"]').each(function () {
-    var $this = $(this);
-    var countTo = $this.attr("data-count");
-    var countNum = 0;
-    var increment = countTo / 200; // Adjust the increment value as needed
+    $('[data-toggle="counter-up"]').each(function () {
+      var $this = $(this);
+      var countTo = parseInt($this.attr("data-count"), 10); // Parse the data-count attribute as an integer
+      var countNum = 0;
+      var increment = countTo / 200; // Adjust the increment value as needed
 
-    function updateCounter() {
-      countNum += increment;
-      $this.text(Math.floor(countNum));
-      if (countNum < countTo) {
-        requestAnimationFrame(updateCounter);
-      } else {
-        $this.text(countTo);
+      function updateCounter() {
+        countNum += increment;
+        $this.text(Math.floor(countNum));
+        if (countNum < countTo) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          $this.text(countTo);
+        }
       }
-    }
 
-    console.log("Element found for counter-up:", this);
-    requestAnimationFrame(updateCounter);
+      console.log("Element found for counter-up:", this);
+      requestAnimationFrame(updateCounter);
+    });
+
+    console.log("Facts counter initialized");
   });
-
-  console.log("Facts counter initialized");
 
   // Modal Video
   $(document).ready(function () {
