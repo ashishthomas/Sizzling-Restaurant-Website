@@ -63,21 +63,14 @@
     return false;
   });
 
-  // Facts counter
-  // $('[data-toggle="counter-up"]').counterUp({
-  //   delay: 10,
-  //   time: 2000,
-  // });
-
-  // Facts counter
   $(document).ready(function () {
     console.log("Initializing facts counter");
 
     $('[data-toggle="counter-up"]').each(function () {
       var $this = $(this);
-      var countTo = parseInt($this.attr("data-count"), 10); // Parse the data-count attribute as an integer
+      var countTo = parseInt($this.attr("data-count"), 10);
       var countNum = 0;
-      var increment = countTo / 200; // Adjust the increment value as needed
+      var increment = countTo / 200;
 
       function updateCounter() {
         countNum += increment;
@@ -116,7 +109,6 @@
     });
   });
 
-  // Testimonials carousel
   $(".testimonial-carousel").owlCarousel({
     autoplay: true,
     smartSpeed: 1000,
