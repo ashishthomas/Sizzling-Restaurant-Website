@@ -154,8 +154,10 @@
                 Reservation
               </h5>
               <h1 class="text-white mb-4">Book A Table Online</h1>
-              <form>
+
+              <form id="booking-form">
                 <div class="row g-3">
+                  <!-- Name -->
                   <div class="col-md-6">
                     <div class="form-floating">
                       <input
@@ -166,7 +168,10 @@
                       />
                       <label for="name">Your Name</label>
                     </div>
+                    <small id="name-error" class="text-danger"></small>
                   </div>
+
+                  <!-- Email -->
                   <div class="col-md-6">
                     <div class="form-floating">
                       <input
@@ -177,7 +182,10 @@
                       />
                       <label for="email">Your Email</label>
                     </div>
+                    <small id="email-error" class="text-danger"></small>
                   </div>
+
+                  <!-- Date & Time -->
                   <div class="col-md-6">
                     <div
                       class="form-floating date"
@@ -194,7 +202,10 @@
                       />
                       <label for="datetime">Date & Time</label>
                     </div>
+                    <small id="datetime-error" class="text-danger"></small>
                   </div>
+
+                  <!-- People -->
                   <div class="col-md-6">
                     <div class="form-floating">
                       <select class="form-select" id="select1">
@@ -205,6 +216,8 @@
                       <label for="select1">No Of People</label>
                     </div>
                   </div>
+
+                  <!-- Message -->
                   <div class="col-12">
                     <div class="form-floating">
                       <textarea
@@ -216,6 +229,8 @@
                       <label for="message">Special Request</label>
                     </div>
                   </div>
+
+                  <!-- Submit -->
                   <div class="col-12">
                     <button class="btn btn-primary w-100 py-3" type="submit">
                       Book Now
@@ -289,14 +304,14 @@
                 Contact
               </h4>
               <p class="mb-2">
-                <i class="fa fa-map-marker-alt me-3"></i>7th Street, Whitefield,
-                Bengaluru, India
+                <i class="fa fa-map-marker-alt me-3"></i>Bengaluru, Karnataka,
+                India
               </p>
               <p class="mb-2">
-                <i class="fa fa-phone-alt me-3"></i>+91 7825668432
+                <i class="fa fa-phone-alt me-3"></i>+91 8105124824
               </p>
               <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i>info@example.com
+                <i class="fa fa-envelope me-3"></i>ashishthomas13@zohomail.in
               </p>
               <div class="d-flex pt-2">
                 <a
@@ -348,16 +363,23 @@
               </p>
               <div class="position-relative mx-auto" style="max-width: 400px">
                 <input
+                  id="newsletter-email"
                   class="form-control border-primary w-100 py-3 ps-4 pe-5"
                   type="text"
                   placeholder="Your email"
                 />
                 <button
+                  id="signup-btn"
                   type="button"
                   class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
                 >
                   SignUp
                 </button>
+                <small
+                  id="email-error"
+                  class="text-danger position-absolute"
+                  style="top: 100%; left: 0"
+                ></small>
               </div>
             </div>
           </div>

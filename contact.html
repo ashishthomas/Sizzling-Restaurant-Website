@@ -104,7 +104,9 @@
                 >Contact</a
               >
             </div>
-            <a href="# " class="btn btn-primary py-2 px-4">Book A Table</a>
+            <a href="booking.html" class="btn btn-primary py-2 px-4"
+              >Book A Table</a
+            >
           </div>
         </nav>
 
@@ -183,7 +185,7 @@
               <div class="wow fadeIn" data-wow-delay="0.1s">
                 <div class="embed-responsive embed-responsive-16by9">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.427974267662!2d77.75309037454655!3d12.972524914859088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0dfd240ee185%3A0x889a2a3ebc724500!2s7th%20Cross%20Rd%2C%20Whitefield%2C%20Bengaluru%2C%20Karnataka%20560066!5e1!3m2!1sen!2sin!4v1732804425997!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d450391.4694993286!2d77.30126945310806!3d12.954459531495921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e1!3m2!1sen!2sin!4v1752131784730!5m2!1sen!2sin"
                     width="600"
                     height="450"
                     style="border: 0"
@@ -196,8 +198,9 @@
             </div>
             <div class="col-md-6">
               <div class="wow fadeInUp" data-wow-delay="0.2s">
-                <form>
+                <form id="contact-form">
                   <div class="row g-3">
+                    <!-- Name -->
                     <div class="col-md-6">
                       <div class="form-floating">
                         <input
@@ -208,7 +211,10 @@
                         />
                         <label for="name">Your Name</label>
                       </div>
+                      <small id="name-error" class="text-danger"></small>
                     </div>
+
+                    <!-- Email -->
                     <div class="col-md-6">
                       <div class="form-floating">
                         <input
@@ -219,7 +225,10 @@
                         />
                         <label for="email">Your Email</label>
                       </div>
+                      <small id="email-error" class="text-danger"></small>
                     </div>
+
+                    <!-- Subject -->
                     <div class="col-12">
                       <div class="form-floating">
                         <input
@@ -230,7 +239,10 @@
                         />
                         <label for="subject">Subject</label>
                       </div>
+                      <small id="subject-error" class="text-danger"></small>
                     </div>
+
+                    <!-- Message -->
                     <div class="col-12">
                       <div class="form-floating">
                         <textarea
@@ -241,7 +253,10 @@
                         ></textarea>
                         <label for="message">Message</label>
                       </div>
+                      <small id="message-error" class="text-danger"></small>
                     </div>
+
+                    <!-- Submit -->
                     <div class="col-12">
                       <button class="btn btn-primary w-100 py-3" type="submit">
                         Send Message
@@ -282,14 +297,14 @@
                 Contact
               </h4>
               <p class="mb-2">
-                <i class="fa fa-map-marker-alt me-3"></i>7th Street, Whitefield,
-                Bengaluru, India
+                <i class="fa fa-map-marker-alt me-3"></i>Bengaluru, Karnataka,
+                India
               </p>
               <p class="mb-2">
-                <i class="fa fa-phone-alt me-3"></i>+91 7825668432
+                <i class="fa fa-phone-alt me-3"></i>+91 8105124824
               </p>
               <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i>info@example.com
+                <i class="fa fa-envelope me-3"></i>ashishthomas13@zohomail.in
               </p>
               <div class="d-flex pt-2">
                 <a
@@ -341,16 +356,23 @@
               </p>
               <div class="position-relative mx-auto" style="max-width: 400px">
                 <input
+                  id="newsletter-email"
                   class="form-control border-primary w-100 py-3 ps-4 pe-5"
                   type="text"
                   placeholder="Your email"
                 />
                 <button
+                  id="signup-btn"
                   type="button"
                   class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
                 >
                   SignUp
                 </button>
+                <small
+                  id="email-error"
+                  class="text-danger position-absolute"
+                  style="top: 100%; left: 0"
+                ></small>
               </div>
             </div>
           </div>

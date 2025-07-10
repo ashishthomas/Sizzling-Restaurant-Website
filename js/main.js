@@ -130,3 +130,133 @@
     },
   });
 })(jQuery);
+
+// footer your email validation
+
+document.getElementById("signup-btn").addEventListener("click", function () {
+  const emailInput = document.getElementById("newsletter-email");
+  const errorDiv = document.getElementById("email-error");
+  const email = emailInput.value.trim();
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (email === "") {
+    errorDiv.textContent = "Email is required.";
+    emailInput.classList.add("is-invalid");
+  } else if (!emailRegex.test(email)) {
+    errorDiv.textContent = "Please enter a valid email.";
+    emailInput.classList.add("is-invalid");
+  } else {
+    errorDiv.textContent = "";
+    emailInput.classList.remove("is-invalid");
+    alert("Thanks for subscribing!");
+    emailInput.value = "";
+  }
+});
+
+// booking table validation
+
+document
+  .getElementById("booking-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    document.getElementById("name-error").textContent = "";
+    document.getElementById("email-error").textContent = "";
+    document.getElementById("datetime-error").textContent = "";
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const datetime = document.getElementById("datetime").value.trim();
+
+    let valid = true;
+
+    if (name === "") {
+      document.getElementById("name-error").textContent = "Name is required.";
+      valid = false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === "") {
+      document.getElementById("email-error").textContent = "Email is required.";
+      valid = false;
+    } else if (!emailRegex.test(email)) {
+      document.getElementById("email-error").textContent =
+        "Invalid email format.";
+      valid = false;
+    }
+
+    if (datetime === "") {
+      document.getElementById("datetime-error").textContent =
+        "Please select date & time.";
+      valid = false;
+    }
+
+    if (valid) {
+      alert("Booking submitted successfully!");
+      this.reset();
+    }
+  });
+
+
+  
+// contact page validation
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Clear all error messages
+    ["name", "email", "subject", "message"].forEach((id) => {
+      document.getElementById(id + "-error").textContent = "";
+    });
+
+    // Fetch input values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    let isValid = true;
+
+    // Name validation
+    if (name === "") {
+      document.getElementById("name-error").textContent = "Name is required.";
+      isValid = false;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === "") {
+      document.getElementById("email-error").textContent = "Email is required.";
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      document.getElementById("email-error").textContent =
+        "Invalid email format.";
+      isValid = false;
+    }
+
+    // Subject validation
+    if (subject === "") {
+      document.getElementById("subject-error").textContent =
+        "Subject is required.";
+      isValid = false;
+    }
+
+    // Message validation
+    if (message === "") {
+      document.getElementById("message-error").textContent =
+        "Message is required.";
+      isValid = false;
+    } else if (message.length < 10) {
+      document.getElementById("message-error").textContent =
+        "Message must be at least 10 characters.";
+      isValid = false;
+    }
+
+    if (isValid) {
+      alert("Message sent successfully!");
+      this.reset(); // Clear the form
+    }
+  });
